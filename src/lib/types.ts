@@ -59,3 +59,30 @@ export interface ApiResponse<T> {
   messages: string;
   data: T;
 }
+
+/* ── Auth ── */
+export interface LoginRequest {
+  username: string;
+  password: string;
+}
+
+export interface CookieData {
+  PHPSESSID: string;
+  dle_user_id: string;
+  dle_password: string;
+}
+
+export interface LoginResponse {
+  logged_in: boolean;
+  cookie: CookieData;
+}
+
+export interface RegisterRequest {
+  email: string;
+  name: string;
+  password: string;
+}
+
+export interface RegisterResponse {
+  registered: boolean;
+}
